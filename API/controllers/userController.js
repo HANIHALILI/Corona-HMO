@@ -100,6 +100,9 @@ async function updateVaccinations(userId, vaccinations) {
         if (!user) {
             throw new Error('User not found');
         }
+        if(vaccinations.length === 0){
+            return
+        }
         for (const v of vaccinations) {
             if (v._id) {
                 // Update existing vaccination
@@ -128,20 +131,25 @@ async function updateVaccinations(userId, vaccinations) {
 }
 async function uploadImageByIdentity(req, res) {
     try {
+        const user = await User.findOne({ identity: req.params.identity });
+           console.log(req)
         // Extract image data from req.body
+        if(req.body.image == null){
+            user.image.data = null;
+            user.image.contentType = null;
+            
+        }
+        else{
         const data = req.body.image.data;
         const contentType = req.body.image.contentType;
 
         // Convert data URL to Buffer
         const bufferData = Buffer.from(data.split(';base64,')[1], 'base64');
 
-        // Find the user by some identifier (e.g., userIdentity)
-        const user = await User.findOne({ identity: req.params.identity });
-
         // Update the user document with the image data
         user.image.data = bufferData;
         user.image.contentType = contentType;
-
+    }
         // Save the updated user document
         await user.save();
 
@@ -149,7 +157,7 @@ async function uploadImageByIdentity(req, res) {
         // res.status(200).json({ message: 'Image uploaded successfully' });
     } catch (error) {
         console.error('Error uploading image:', error);
-        res.status(500).json({ message: 'Internal server error' });
+        throw error; // Propagate the error
     }
 };
 

@@ -6,7 +6,7 @@ const ImageDisplay = ({  isEditable ,updateUserDetails , setUpdateUserDetails}) 
     const [isEditImage, setIsEditImage] = useState(false);
 
     useEffect(() => {
-        if (updateUserDetails && updateUserDetails.image) {
+        if (updateUserDetails && updateUserDetails.image && updateUserDetails.image.data) {
             const { contentType, data } = updateUserDetails.image;
             const base64Data = btoa(
                 new Uint8Array(data.data).reduce(
@@ -18,7 +18,9 @@ const ImageDisplay = ({  isEditable ,updateUserDetails , setUpdateUserDetails}) 
             setImageData(imageDataUrl);
         }
     }, [updateUserDetails]);
-    
+
+
+ 
     const handleDelete = async () => {
         try {
             setUpdateUserDetails({ ...updateUserDetails, image: null });
