@@ -60,4 +60,6 @@ git clone https://github.com/HANIHALILI/Corona-HMO.git
 * **עדכון פרטי חבר קופה:** ניתן לעדכן את הפרטים האישיים של חברי קופה.
 * **מחיקת חבר קופה:** ניתן למחוק חברי קופה מהמאגר.
 * **הצגת נתונים סטטיסטיים:** ניתן להציג נתונים סטטיסטיים על חברי קופה, כגון מספר חולים, מספר מחוסנים.
+
+<embed src="https://github.com/HANIHALILI/Corona-HMO.git/תצוגת לקוח.pdf" type="application/pdf" width="100%" height="600px" />
 ```
