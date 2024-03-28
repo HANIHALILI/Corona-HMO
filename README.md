@@ -1,4 +1,4 @@
-```
+
 # Corona HMO
 
 ## התקנה והרצה
@@ -7,7 +7,7 @@
 
 ```bash
 git clone https://github.com/HANIHALILI/Corona-HMO.git
-```
+
 
 ### הרצת הלקוח
 
