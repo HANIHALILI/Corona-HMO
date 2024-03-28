@@ -1,0 +1,105 @@
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  width: 700px; /* Adjust the width as needed */
+}
+
+.popup label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.popup input[type="text"],
+.popup input[type="date"],
+.popup input[type="tel"] {
+  width: 100%;
+  padding: 4px;
+  margin-top: 3px;
+  margin-bottom: 5px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.popup button {
+  background-color: #00b395;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.popup button:hover {
+  background-color: #a2e0d6;
+}
+
+/* Table style */
+.table-container {
+  margin-top: 20px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th, .table td {
+  padding: 8px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.table th {
+  background-color: #87f6f0;
+}
+
+
+.profile-picture-container {
+  position: relative; /* Position the container relative to the parent */
+}
+
+.profile-picture {
+  width: 100px; /* Set width of profile picture */
+  height: 100px; /* Set height of profile picture */
+  border-radius: 50%; /* Make the image round */
+  border: 2px solid #fff; /* Add border */
+  position: absolute; /* Position the image absolutely */
+  top: 0px; /* Adjust top position */
+  right: 5px; /* Adjust right position */
+}
+
+.image-options {
+  position: absolute; /* Position the image options absolutely */
+  bottom: -30px; /* Adjust bottom position to place it below the image */
+  right: 10px; /* Adjust right position */
+}
+
+/* Add additional styling as needed */
+.profile-picture-container {
+  position: relative; /* Ensure the container is positioned relatively */
+}
+
+.profile-picture {
+  width: 100px; /* Set width of profile picture */
+  height: 100px; /* Set height of profile picture */
+  border-radius: 50%; /* Make the image round */
+  border: 2px solid #fff; /* Add border */
+}
+
+.image-options {
+  position: absolute; /* Position the image options absolutely */
+  bottom: -40px; /* Adjust bottom position to place it below the image */
+  right: 0; /* Align the options to the right */
+}
+
+.image-options button {
+  display: block; /* Make the buttons display as block elements */
+  margin-bottom: 5px; /* Add margin between buttons */
+}
